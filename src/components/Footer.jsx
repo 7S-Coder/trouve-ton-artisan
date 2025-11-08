@@ -1,5 +1,6 @@
 import logowhite from '../assets/logowhite.png';
 import { Phone, Facebook, Linkedin, Youtube, Instagram, Twitter } from 'lucide-react';
+import { FaWhatsapp, FaTiktok } from "react-icons/fa";
 import '../css/components/Footer.css';
 
 export default function Footer() {
@@ -53,6 +54,8 @@ export default function Footer() {
                     <li><a href="#"><Youtube /></a></li>
                     <li><a href="#"><Instagram /></a></li>
                     <li><a href="#"><Twitter /></a></li>
+                    <li><a href="#"><FaWhatsapp /></a></li>
+                    <li><a href="#"><FaTiktok /></a></li>
                 </ul>
             </section>
         </>

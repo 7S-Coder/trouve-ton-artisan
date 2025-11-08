@@ -81,6 +81,7 @@ Footer .bottom-footer ul {
     margin-bottom: 20px;
     background-color: white;
     margin-bottom: 0;
+    padding: 0.5rem 0;
 }
 
 .social-network ul {
@@ -88,22 +89,35 @@ Footer .bottom-footer ul {
 }
 
 .social-network li {
-    width: 25px;
-    height: 25px;
-    margin: 5px;
+    width: 20px;
+    height: 20px;
+    margin: 15px;
     padding: 2px;
 }
 
-.social-network li:hover {
-    background-color: var(--background-color);
+.social-network li {
+    background-color: var(--text-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.social-network svg {
+    color: white;
+    width: 13px;
+}
+
+.social-network li:first-child {
     border-radius: 50%;
 }
 
-
-.social-network svg {
-    color: var(--text-color);
+.social-network li:nth-child(3) {
+    border-radius: 5px;
+    height: 18px;
+    width: 25px;
 }
 
-.social-network svg:hover {
-    color: var(--primary-color);
+.social-network li:hover {
+    background-color: var(--primary-color);
 }
