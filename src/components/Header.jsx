@@ -1,5 +1,5 @@
 import logo from '../assets/logo.png';
-import '../css/pages/components/Header.css';
+import '../css/components/Header.css';
 import { Search } from 'lucide-react';
 
 export default function Header() {
