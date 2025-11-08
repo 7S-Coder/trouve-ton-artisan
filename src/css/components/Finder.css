@@ -1,0 +1,37 @@
+#finder div {
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+#finder em {
+    font-style: normal;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 30px;
+}
+
+#finder h1 {
+    margin-bottom: 5vh;
+}
+
+#finder h2, #finder div:first-child {
+    margin-left: 3vw;
+}
+
+#finder h2 {
+    margin-bottom: 1vh;
+}
+
+
+
+#finder h2::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin-bottom: 5px;
+}
