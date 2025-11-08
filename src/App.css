@@ -3,6 +3,7 @@
   --primary-color-darken: #00497c;
   --background-color: #F1F8FC;
   --text-color: #384050;
+  --text-light-color: #F1F8FC;
   --red-color: #cd2c2e;
   --green-color: #82b864;
 }
@@ -11,6 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: graphik, sans-serif;
 }
 
 
