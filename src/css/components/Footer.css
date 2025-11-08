@@ -30,10 +30,10 @@ Footer .coordonnées li:first-child {
 .bubble {
     width: 1200px;
     margin: 0 auto;
-    height: 30px;
+    height: 45px;
     background-color: var(--text-light-color);
     border-radius: 0 0 25px 25px;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
 }
 Footer .coordonnées {
     margin-top: 40px;
