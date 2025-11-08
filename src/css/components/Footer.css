@@ -23,6 +23,10 @@ Footer section {
     line-height: 25px;
 }
 
+Footer .coordonnées li:first-child {
+    margin-bottom: 20px;
+}
+
 .bubble {
     width: 1200px;
     margin: 0 auto;
@@ -70,10 +74,11 @@ Footer .bottom-footer ul {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     justify-content: center;
 }
+
 
 .social-network {
     display: flex;
