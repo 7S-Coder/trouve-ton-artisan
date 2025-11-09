@@ -15,7 +15,7 @@ export default function Header() {
                     </section>
                     
                     <ul>
-                        <li><a href="#">Batiment</a></li>
+                        <li><a href="/artisans">Artisans</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Fabrication</a></li>
                         <li><a href="#">Alimentation</a></li>

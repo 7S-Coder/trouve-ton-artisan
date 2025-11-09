@@ -6,7 +6,7 @@ export default function ArtisanCard({ artisan }) {
         <section className="artisan-card">
             <span className="name">{artisan.name}</span>
             <span className="job">Job : {artisan.job}</span>
-            <p className="description">Description : {artisan.description}</p>
+            <p className="description">Déscription : {artisan.description}</p>
             <span className="location">Location : {artisan.location}</span>
             <span className="rating">Note : {artisan.rating}</span>
             <ContactBtn />
