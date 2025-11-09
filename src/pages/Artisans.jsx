@@ -1,5 +1,5 @@
 import ArtisanCard from '../components/ArtisanCard.jsx';
-import ArtisansData from '../datas/artisans.json';
+import ArtisansData from '../datas/Artisans.json';
 import '../css/pages/Artisans.css';
 import { useSearchParams } from 'react-router-dom';
 import { useMemo } from 'react';

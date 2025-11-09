@@ -1,6 +1,6 @@
 import '../css/components/ArtisanOfMonth.css';
 import ArtisanCard from './ArtisanCard';
-import Artisans from '../datas/artisans.json';
+import Artisans from '../datas/Artisans.json';
 
 
 export default function ArtisanOfMonth() {

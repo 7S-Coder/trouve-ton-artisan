@@ -1,4 +1,4 @@
-import Artisans from '../datas/artisans.json';
+import Artisans from '../datas/Artisans.json';
 import { useParams } from 'react-router-dom';
 import '../css/pages/ArtisanDetail.css';
 
