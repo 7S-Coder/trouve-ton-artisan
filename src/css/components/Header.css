@@ -14,6 +14,15 @@ nav {
 
 }
 
+nav #search-bar {
+    position: relative;
+}
+
+nav #search-bar > div {
+    display: flex;
+    align-items: center;
+}
+
 nav #search-bar input {
     flex-grow: 1;
     margin: 0 20px;
@@ -26,13 +35,29 @@ nav #search-bar input {
     padding-left: 10px;
 }
 
+nav #search-bar input:focus {
+    outline: none;
+    border-bottom-color: var(--primary-color-darken);
+    border-right-color: var(--primary-color-darken);
+}
+
 nav #search-bar button {
     background-color: transparent;
     border: none;
-
+    cursor: pointer;
     position: relative;
     left: -45px;
     top: 2px;
+    transition: all 0.2s ease;
+}
+
+nav #search-bar button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+nav #search-bar button:hover:not(:disabled) {
+    transform: scale(1.1);
 }
 
 nav #search-bar button svg {

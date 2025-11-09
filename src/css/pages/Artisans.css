@@ -4,6 +4,20 @@
     gap: 20px;
     justify-content: center;
     padding: 20px;
+}
 
-    
+.no-results {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-color);
+    width: 100%;
+}
+
+.no-results p {
+    margin-bottom: 10px;
+}
+
+.no-results a {
+    color: var(--primary-color);
+    text-decoration: underline;
 }

@@ -4,6 +4,13 @@
     margin-bottom: 100px;
 }
 
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
 .artisan-detail-card {
     border: 1px solid #ddd;
     border-radius: 0 8px 8px 0;

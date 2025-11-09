@@ -4,27 +4,64 @@ import { Search } from 'lucide-react';
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import ArtisansData from '../datas/Artisans.json';
+import { useSecureValidation } from '../hooks/useSecureValidation';
+import ErrorMessage from './ui/ErrorMessage';
+import { sanitizeHTML } from '../utils/security';
 
 export default function Header() {
     const [searchTerm, setSearchTerm] = useState('');
     const navigate = useNavigate();
+    const { validationErrors, validateSearch, clearError } = useSecureValidation();
 
-    const handleSearch = (e) => {
+    const handleSearch = async (e) => {
         e.preventDefault();
-        if (searchTerm.trim()) {
-            // Chercher l'artisan par nom
-            const foundArtisan = ArtisansData.find(artisan => 
-                artisan.name.toLowerCase().includes(searchTerm.toLowerCase())
-            );
+        
+        // Nettoyer les erreurs précédentes
+        clearError('search');
+        
+        if (!searchTerm || !searchTerm.trim()) {
+            return;
+        }
+
+        // Valider et sanitiser le terme de recherche
+        const validation = await validateSearch(searchTerm);
+        
+        if (!validation.isValid) {
+            return; // L'erreur sera affichée via validationErrors
+        }
+
+        const sanitizedSearchTerm = validation.sanitizedValue;
+        
+        try {
+            // Chercher l'artisan par nom (avec données sanitisées)
+            const foundArtisan = ArtisansData.find(artisan => {
+                const sanitizedArtisanName = sanitizeHTML(artisan.name);
+                return sanitizedArtisanName.toLowerCase().includes(sanitizedSearchTerm.toLowerCase());
+            });
             
             if (foundArtisan) {
                 // Rediriger vers la page de détail de l'artisan
                 navigate(`/artisans/${foundArtisan.id}`);
             } else {
-                // Rediriger vers la page artisans avec le terme de recherche
-                navigate(`/artisans?search=${encodeURIComponent(searchTerm)}`);
+                // Rediriger vers la page artisans avec le terme de recherche sécurisé
+                navigate(`/artisans?search=${encodeURIComponent(sanitizedSearchTerm)}`);
             }
+        } catch (error) {
+            console.error('Erreur lors de la recherche:', error);
         }
+    };
+
+    const handleInputChange = (e) => {
+        const value = e.target.value;
+        
+        // Nettoyer l'erreur si elle existe
+        if (validationErrors.search) {
+            clearError('search');
+        }
+        
+        // Sanitiser l'input en temps réel
+        const sanitizedValue = sanitizeHTML(value);
+        setSearchTerm(sanitizedValue);
     };
 
     return (
@@ -34,16 +71,26 @@ export default function Header() {
                 <div>
                     <form onSubmit={handleSearch}>
                         <section id="search-bar">
-                            <input 
-                                type="text" 
-                                value={searchTerm}
-                                onChange={(e) => setSearchTerm(e.target.value)}
-                                aria-placeholder="Rechercher un artisan" 
-                                placeholder="Rechercher un artisan" 
-                            />
-                            <button type="submit"> 
-                                <Search size={16} aria-label="Rechercher un artisan" />
-                            </button>
+                            <div>
+                                <input 
+                                    type="text" 
+                                    value={searchTerm}
+                                    onChange={handleInputChange}
+                                    aria-describedby="search-error"
+                                    aria-placeholder="Rechercher un artisan" 
+                                    placeholder="Rechercher un artisan"
+                                    maxLength="100"
+                                />
+                                <button type="submit" disabled={!searchTerm.trim()}> 
+                                    <Search size={16} aria-label="Rechercher un artisan" />
+                                </button>
+                            </div>
+                            {validationErrors.search && (
+                                <ErrorMessage 
+                                    message={validationErrors.search} 
+                                    type="error"
+                                />
+                            )}
                         </section>
                     </form>
                     
