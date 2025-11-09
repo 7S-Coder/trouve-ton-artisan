@@ -1,19 +1,92 @@
-# React + Vite
+# Trouve Ton Artisan 🔨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Une application web moderne pour trouver et contacter des artisans qualifiés dans votre région.
 
-Currently, two official plugins are available:
+## 📋 Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Trouve Ton Artisan est une plateforme qui permet de rechercher et découvrir des artisans locaux selon différents critères. L'application offre une interface intuitive pour :
 
-## React Compiler
+- **Rechercher des artisans** par métier, localisation ou nom
+- **Consulter les profils détaillés** avec descriptions et évaluations (évaluation fictive)
+- **Filtrer les résultats** pour trouver l'artisan qui correspond à vos besoins (feature pas deployé)
+- **Découvrir l'artisan du mois** mis en avant (Mis en avant des trois premiers artisans du fichier JON)
+- **Contacter facilement** les professionnels (contact pas fonctionnelle)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 🚀 Technologies utilisées
 
-Note: This will impact Vite dev & build performances.
+- **React** - Interface utilisateur moderne et réactive
+- **Vite** - Build tool rapide et optimisé
+- **React Router** - Navigation entre les pages
+- **Lucide React** & **React Icons** - Icônes élégantes
+- **CSS3** - Styles personnalisés et responsive
 
-## Expanding the ESLint configuration
+## 💻 Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# trouve-ton-artisan
+### Prérequis
+
+- Node.js (version 18 ou supérieure)
+- npm ou yarn
+
+### Étapes d'installation
+
+1. **Cloner le repository**
+```bash
+git clone https://github.com/7S-Coder/trouve-ton-artisan.git
+cd trouve-ton-artisan
+```
+
+2. **Installer les dépendances**
+```bash
+npm install
+```
+
+3. **Lancer l'application en mode développement**
+```bash
+npm run dev
+```
+
+4. **Accéder à l'application**
+Ouvrez votre navigateur et allez sur `http://localhost:5173`
+
+## 🏗️ Scripts disponibles
+
+- `npm run dev` - Lance le serveur de développement
+- `npm run build` - Construit l'application pour la production
+- `npm run preview` - Prévisualise la build de production
+- `npm run lint` - Analyse le code avec ESLint
+
+## 📱 Fonctionnalités
+
+### Page d'accueil
+- Présentation du service
+- Barre de recherche principale
+- Artisan du mois mis en avant
+- Navigation vers la liste complète des artisans
+
+### Liste des artisans
+- Affichage de tous les artisans disponibles
+- Système de recherche et filtrage
+- Cartes informatives avec évaluations
+
+### Profil artisan
+- Informations détaillées sur chaque artisan
+- Coordonnées et localisation
+- Bouton de contact direct
+
+## 📁 Structure du projet
+
+```
+src/
+├── components/          # Composants réutilisables
+│   ├── ui/             # Composants UI génériques
+│   └── ...
+├── pages/              # Pages de l'application
+├── css/                # Styles CSS organisés
+├── datas/              # Données JSON (artisans)
+└── assets/             # Ressources (polices, images)
+```
+
+
+## 📄 Licence
+
+Ce projet est un devoir CEF.
