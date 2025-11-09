@@ -23,6 +23,7 @@ nav #search-bar input {
     border-bottom: 2px solid var(--primary-color);
     border-left: none;
     border-top: none;
+    padding-left: 10px;
 }
 
 nav #search-bar button {

@@ -13,6 +13,7 @@ export default function ArtisanOfMonth() {
                     <ArtisanCard key={artisan.id} artisan={artisan} />
                 ))}
             </article>
+                <a href='/artisans'> Trouver un artisan près de chez-vous</a>
         </section>
     );
 }

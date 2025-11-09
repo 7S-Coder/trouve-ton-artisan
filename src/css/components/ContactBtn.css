@@ -14,3 +14,7 @@
 #contactBtn:hover {
     background-color: var(--primary-color-darken);
 }
+
+#contactBtn svg {
+    margin-left: 5px;
+}

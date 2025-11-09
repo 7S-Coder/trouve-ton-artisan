@@ -1,0 +1,36 @@
+
+
+#container-artisan-detail h1 {
+    margin-bottom: 100px;
+}
+
+.artisan-detail-card {
+    border: 1px solid #ddd;
+    border-radius: 0 8px 8px 0;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding-bottom: 80px;
+    margin-left: 3vw;
+    border-left-color: var(--primary-color);
+    border-left-width: 4px;
+}
+
+.artisan-detail-card h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.artisan-detail-card h1::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    background-color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.artisan-detail-card h2 {
+    margin-left : 3vw;
+    margin-bottom: 22px;
+}

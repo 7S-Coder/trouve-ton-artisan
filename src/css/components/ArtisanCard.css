@@ -17,9 +17,15 @@
     transition: 1s;
 }
 
+a .artisan-card span, a .artisan-card p {
+    text-decoration: none;
+    text-align: start;
+    color: var(--text-color);
+    font-weight: normal;
+}
+
 .name {
     font-size: 1.5em;
     font-weight: bold;
-    color: var(--primary-color);
     margin-bottom: 8px;
 }

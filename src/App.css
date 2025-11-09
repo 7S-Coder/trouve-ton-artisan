@@ -24,4 +24,11 @@ h1, h2, h3, h4, h5, h6 {
 main {
     max-width: 1200px;
     margin: 0 auto;
+    min-height: 80vh;
 }
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
