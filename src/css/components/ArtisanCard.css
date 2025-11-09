@@ -1,0 +1,25 @@
+.artisan-card {
+    border: 1px solid var(--light-gray);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 20vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.artisan-card:hover {
+    box-shadow: 0 4px 8px var(--primary-color);
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}

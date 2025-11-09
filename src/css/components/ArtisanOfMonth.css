@@ -1,0 +1,23 @@
+#artisan-of-month h2 {
+    margin-left: 3vw;
+}
+
+#artisan-of-month h2::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 4px;
+    background-color: var(--green-color);
+    margin-bottom: 5px;
+}
+
+#artisan-of-month article {
+   display: flex;
+   justify-content: center;
+}
+#artisan-of-month .artisan-cards {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}

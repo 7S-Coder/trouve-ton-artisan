@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Jean Dupont",
+        "job": "Plombier",
+        "description": "Expert en installations sanitaires et réparations diverses.",
+        "location": "Paris",
+        "rating": 4.5
+    },
+    {
+        "id": 2,
+        "name": "Marie Curie",
+        "job": "Électricienne",
+        "description": "Spécialiste en installations électriques résidentielles et commerciales.",
+        "location": "Lyon",
+        "rating": 4.7
+    },
+    {
+        "id": 3,
+        "name": "Paul Martin",
+        "job": "Menuisier",
+        "description": "Création et réparation de meubles sur mesure.",
+        "location": "Marseille",
+        "rating": 4.3
+    }, 
+    {
+        "id": 4,
+        "name": "Sophie Bernard",
+        "job": "Peintre en bâtiment",
+        "description": "Peinture intérieure et extérieure, décoration murale.",
+        "location": "Toulouse",
+        "rating": 4.6
+    },
+    {
+        "id": 5,
+        "name": "Lucas Moreau",
+        "job": "Couvreur",
+        "description": "Installation et réparation de toitures.",
+        "location": "Nice",
+        "rating": 4.4
+    }
+]

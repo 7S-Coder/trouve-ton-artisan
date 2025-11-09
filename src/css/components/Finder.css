@@ -1,10 +1,12 @@
+#finder {
+    margin-bottom: 5vh;
+}
+
 #finder div {
     display: flex;
     align-items: center;
 
 }
-
-
 
 #finder em {
     font-style: normal;
