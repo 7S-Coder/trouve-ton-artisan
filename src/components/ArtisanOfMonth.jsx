@@ -1,6 +1,7 @@
 import '../css/components/ArtisanOfMonth.css';
 import ArtisanCard from './ArtisanCard';
 import Artisans from '../datas/Artisans.json';
+import { Link } from 'react-router-dom';
 
 
 export default function ArtisanOfMonth() {
@@ -13,7 +14,7 @@ export default function ArtisanOfMonth() {
                     <ArtisanCard key={artisan.id} artisan={artisan} />
                 ))}
             </article>
-                <a href='/artisans'> Trouver un artisan près de chez-vous</a>
+                <Link to='/artisans'> Trouver un artisan près de chez-vous</Link>
         </section>
     );
 }

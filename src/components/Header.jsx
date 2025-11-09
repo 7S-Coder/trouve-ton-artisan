@@ -2,7 +2,7 @@ import logo from '../assets/logo.png';
 import '../css/components/Header.css';
 import { Search } from 'lucide-react';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import ArtisansData from '../datas/Artisans.json';
 
 export default function Header() {
@@ -30,7 +30,7 @@ export default function Header() {
     return (
         <header>
             <nav>
-                <a href="/"><img src={logo} alt="Logo de trouve ton artisan" /></a>
+                <Link to="/"><img src={logo} alt="Logo de trouve ton artisan" /></Link>
                 <div>
                     <form onSubmit={handleSearch}>
                         <section id="search-bar">
@@ -48,7 +48,7 @@ export default function Header() {
                     </form>
                     
                     <ul>
-                        <li><a href="/artisans">Artisans</a></li>
+                        <li><Link to="/artisans">Artisans</Link></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Fabrication</a></li>
                         <li><a href="#">Alimentation</a></li>

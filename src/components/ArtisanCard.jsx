@@ -1,5 +1,6 @@
 import '../css/components/ArtisanCard.css';
 import ContactBtn from '../components/ui/ContactBtn.jsx';
+import { Link } from 'react-router-dom';
 
 export default function ArtisanCard({ artisan }) {
     // Fonction pour obtenir les 3 premiers mots de la description
@@ -10,7 +11,7 @@ export default function ArtisanCard({ artisan }) {
     };
 
     return (
-        <a href={`/artisans/${artisan.id}`}>
+        <Link to={`/artisans/${artisan.id}`}>
             <section className="artisan-card">
                 <h3 className="name">{artisan.name}</h3>
                 <span className="job">Job : {artisan.job}</span>
@@ -19,7 +20,7 @@ export default function ArtisanCard({ artisan }) {
                 <span className="rating">Note : {artisan.rating}</span>
                 <ContactBtn />
             </section>
-        </a>
+        </Link>
     );
 }
 
