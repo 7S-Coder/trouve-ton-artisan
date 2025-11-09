@@ -49,9 +49,10 @@ export default function Header() {
                     
                     <ul>
                         <li><Link to="/artisans">Artisans</Link></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Fabrication</a></li>
-                        <li><a href="#">Alimentation</a></li>
+                        <li><Link to="/batiments">Bâtiments</Link></li>
+                        <li><Link to="/services">Services</Link></li>
+                        <li><Link to="/fabrication">Fabrication</Link></li>
+                        <li><Link to="/alimentation">Alimentation</Link></li>
                     </ul>
                 </div>
             </nav>
